@@ -86,7 +86,7 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-    } else if (positionToInteger(rock.style.top) >= 200) {
+   } else if (positionToInteger(rock.style.top) >= 100) {
       console.log('gone')
       rock.remove()
     }
