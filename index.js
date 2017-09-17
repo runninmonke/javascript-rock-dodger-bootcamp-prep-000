@@ -79,19 +79,22 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-   } else if (top < 400) {
+    } else if (positionToInteger(rock.style.top) < 400) {
       function step() {
         rock.style.top = `${positionToInteger(rock.style.top) + 2}px`
-        if (top < 200) {
+        if (positionToInteger(rock.style.top) < 400) {
           window.requestAnimationFrame(step)
         }
       }
       window.requestAnimationFrame(step)
-    }
+
      /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
+    } else if (positionToInteger(rock.style.top) >= 200) {
+        rock.remove();
+    }
   }
 
   // We should kick of the animation of the rock around here
