@@ -87,7 +87,6 @@ function createRock(x) {
      * we should remove the rock from the DOM
      */
    } else if (positionToInteger(rock.style.top) >= GAME_HEIGHT) {
-      console.log('gone')
       rock.remove()
     }
   }
