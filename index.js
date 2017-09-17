@@ -112,7 +112,7 @@ function endGame() {
   for(var i = 0; i < ROCKS.length; i++) {
     ROCKS[i].remove()
   }
-
+  alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
@@ -168,5 +168,5 @@ function start() {
 
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
-  }, 5000)
+  }, 2000)
 }
