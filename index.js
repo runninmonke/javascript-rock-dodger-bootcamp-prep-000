@@ -82,12 +82,12 @@ function createRock(x) {
    } else if (top < 400) {
       function step() {
         rock.style.top = `${positionToInteger(rock.style.top) + 2}px`
-        if (top < 400) {
+        if (top < 200) {
           window.requestAnimationFrame(step)
         }
       }
       window.requestAnimationFrame(step)
-    } 
+    }
      /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
