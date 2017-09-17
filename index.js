@@ -81,7 +81,7 @@ function createRock(x) {
      */
     } else if (positionToInteger(rock.style.top) < 400) {
       rock.style.top = `${positionToInteger(rock.style.top) + 2}px`
-      window.requestAnimationFrame()
+      window.requestAnimationFrame(moveRock)
      /**
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
@@ -93,7 +93,7 @@ function createRock(x) {
   }
 
   // We should kick of the animation of the rock around here
-  var rockAnimate = setInterval(moveRock, 25);
+  moveRock(rock);
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
