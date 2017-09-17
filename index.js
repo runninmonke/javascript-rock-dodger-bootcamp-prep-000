@@ -113,7 +113,7 @@ function endGame() {
   for(var i = 0; i < ROCKS.length; i++) {
     ROCKS[i].remove()
   }
-  
+
 }
 
 function moveDodger(e) {
@@ -125,6 +125,7 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
+   console.log('pressed')
    if (e.which == LEFT_ARROW) {
      window.requestAnimationFrame(moveDodgerLeft)
    } else if (e.which == RIGHT_ARROW) {
