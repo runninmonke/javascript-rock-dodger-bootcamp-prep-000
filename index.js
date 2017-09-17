@@ -93,7 +93,7 @@ function createRock(x) {
   }
 
   // We should kick of the animation of the rock around here
-  var rockAnimate = setInterval(moveRock, 50);
+  var rockAnimate = setInterval(moveRock, 25);
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
